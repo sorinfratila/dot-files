@@ -1,0 +1,21 @@
+set editing-mode vi
+
+
+###########################################################
+## Keymaps for when we're in command mode (e.g.,  after hitting ESC)
+set keymap vi-command
+#clear everything on two Ecs presses
+"\e\e": "\C-0\C-k\C-l"
+
+
+###########################################################
+## Keymaps for when we're in insert (i.e.,  typing stuff in) mode
+set keymap vi-insert
+# Pressing tab will list all completions & select the first one. Pressing it 
+# again will cycle through available completions.
+TAB: menu-complete
+# Shift-TAB cycles completions backward
+"\kcbt": menu-complete-backward
+
+set show-mode-in-prompt on
+

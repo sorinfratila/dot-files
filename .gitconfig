@@ -1,0 +1,23 @@
+[user]
+	name = Tomas Izo
+	email = tomas@izo.sk
+[core]
+	editor = vim
+	excludesfile = /Volumes/Files/Users/tomasizo/.gitignore_global
+	pager = vim -c AnsiEsc -
+[push]
+	default = upstream
+[merge]
+	conflictstyle = diff3
+[color]
+	ui = auto
+[credential]
+	helper = osxkeychain
+[alias]
+	add-commit = !git add -A && git commit
+	lg =!git log --graph
+	# AutoCommitPush: a-add, c-commit, p-push
+	cp = "!f() { git commit -m \"$1\" && git push origin master;  }; f"
+	ac = "!f() { git add .  && git commit -m \"$1\";  }; f"
+	aca = "!f() { git add .  && git commit --amend --no-edit \"$1\";  }; f"
+	acp = "!f() { git add .  && git commit -m \"$1\" && git push origin master; }; f"
