@@ -180,7 +180,7 @@ set relativenumber nu 	" line numbering
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable methods folding
-set foldmethod=indent
+set foldmethod=syntax
 set foldlevel=99
 " Enable methods folding with the spacebar
 nnoremap <Leader><Leader> za
