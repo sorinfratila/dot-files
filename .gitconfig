@@ -3,7 +3,7 @@
 	email = tomas@izo.sk
 [core]
 	editor = vim
-	excludesfile = /Volumes/Files/Users/tomasizo/.gitignore_global
+	excludesfile = /Users/tomasizo/.gitignore_global
 	pager = vim -c AnsiEsc -
 [push]
 	default = upstream
@@ -21,3 +21,9 @@
 	ac = "!f() { git add .  && git commit -m \"$1\";  }; f"
 	aca = "!f() { git add .  && git commit --amend --no-edit \"$1\";  }; f"
 	acp = "!f() { git add .  && git commit -m \"$1\" && git push origin master; }; f"
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Users/tomasizo/Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
